@@ -27,7 +27,7 @@ body {
   padding-left: 40px;
   padding-right: 40px; */
   padding: 20px 40px;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
   /* height: 80px; */
 }
 
@@ -37,7 +37,7 @@ nav {
 }
 
 article {
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
 }
 
 .post-header {
@@ -351,7 +351,8 @@ footer {
   font-style: italic;
 }
 
-.row {
+/*FLEXBOX LAYOUT*/
+/* .row {
   display: flex;
   gap: 75px;
   margin-bottom: 60px;
@@ -359,14 +360,38 @@ footer {
 }
 
 article {
-  /* flex: 0 0 825px; */
-  /* above is not necessary because to fullfill the rest of place it will use 825px */
-  flex: 1;
+  flex: 0 0 825px; */
+/* above is not necessary because to fullfill the rest of place it will use 825px */
+/* flex: 1;
   margin-bottom: 0;
 }
 
+aside { */
+/* flex-shrink: 0; */
+/* flex-basis: 300px; */
+/* flex: 0 0 300px;
+} */
+
+/*CSS GRID LAYOUT*/
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 75px;
+  row-gap: 60px;
+  align-items: start;
+}
+
+.main-header {
+  /* grid-column: 1 / span 2; */
+  grid-column: 1 / -1;
+}
+
+article {
+}
+
 aside {
-  /* flex-shrink: 0; */
-  /* flex-basis: 300px; */
-  flex: 0 0 300px;
+}
+
+footer {
+  grid-column: 1 / -1;
 }

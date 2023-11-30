@@ -40,6 +40,32 @@
         margin: 40px;
 
         /* CSS GRID */
+        display: grid;
+        /* grid-template-columns: 200px 200px 1fr 2fr; */
+        /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+        /* grid-template-rows: 300px 200px; */
+        grid-template-columns: repeat(3, 1fr) auto;
+        /* grid-template-rows: 1fr auto; */
+        grid-template-rows: 1fr 1fr;
+
+        /* gap: 30px; */
+        column-gap: 30px;
+        row-gap: 60px;
+      }
+
+      .el--8 {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+
+      .el--2 {
+        /* grid-column: 1 / span 3; */
+        grid-column: 1 / -1;
+        grid-row: 2;
+      }
+
+      .el--6 {
+        grid-row: 3 / 5;
       }
 
       .container--2 {
@@ -47,12 +73,30 @@
         font-family: sans-serif;
         background-color: black;
         font-size: 40px;
-        margin: 100px;
+        margin: 40px;
 
         width: 1000px;
         height: 600px;
 
         /* CSS GRID */
+        display: grid;
+        grid-template-columns: 125px 200px 125px;
+        grid-template-rows: 250px 100px;
+
+        /*Aligining tracks inside container: distribute empty space*/
+        justify-content: center;
+        /* justify-content: space-between; */
+        align-content: center;
+        gap: 50px;
+
+        /*Aliging items INSDIE cells: moving items around inside ceslls*/
+        align-items: center;
+        justify-items: center;
+      }
+
+      .el--3 {
+        align-self: end;
+        justify-self: end;
       }
     </style>
   </head>
