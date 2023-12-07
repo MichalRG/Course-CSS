@@ -27,8 +27,19 @@
       }
 
       header {
-        background-color: orangered;
         height: 100vh;
+        position: relative;
+
+        background-size: cover;
+        color: #fff;
+        /* background-image: url("./hero.jpg"); */
+        /* background-image: linear-gradient(to right, red, blue); */
+        /*trick to make image darker, if I put one after another it wil put this img on the first one [?]*/
+        background-image: linear-gradient(
+            rgba(34, 34, 34, 0.6),
+            rgba(34, 34, 34, 0.6)
+          ),
+          url("./hero.jpg");
       }
 
       nav {
@@ -36,10 +47,25 @@
         font-weight: 700;
         display: flex;
         justify-content: space-between;
+        padding-top: 32px;
+      }
+
+      .header-container {
+        width: 1200px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        /* text-align: center; */
+      }
+
+      .header-container-inner {
+        width: 50%;
       }
 
       h1 {
         font-size: 52px;
+        line-height: 1.05;
         margin-bottom: 32px;
       }
 
@@ -78,13 +104,16 @@
         <div>NAVIGATION</div>
       </nav>
 
-      <div class="container">
-        <h1>A healthy meal delivered to your door, every single day</h1>
-        <p>
-          The smart 365-days-per-year food suscription that will make you eat
-          healty algain. Tailored to your personal tastes and nutritional needs
-        </p>
-        <a href="#" class="btn">Start eating well</a>
+      <div class="header-container">
+        <div class="header-container-inner">
+          <h1>A healthy meal delivered to your door, every single day</h1>
+          <p>
+            The smart 365-days-per-year food suscription that will make you eat
+            healty algain. Tailored to your personal tastes and nutritional
+            needs
+          </p>
+          <a href="#" class="btn">Start eating well</a>
+        </div>
       </div>
     </header>
     <section>
